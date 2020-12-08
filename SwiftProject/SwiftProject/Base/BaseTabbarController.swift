@@ -25,6 +25,7 @@ class BaseTabbarController: UITabBarController {
         self.addChild(nav2);
         self.addChild(nav3);
         self.addChild(nav4);
+        print("测试")
     }
 
 }
