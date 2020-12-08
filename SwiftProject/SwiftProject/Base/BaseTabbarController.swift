@@ -12,20 +12,69 @@ class BaseTabbarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nav1 : UINavigationController = UINavigationController(rootViewController: KHomeViewController())
-        nav1.title = "item1"
-        let nav2 : UINavigationController = UINavigationController(rootViewController: KTimeLineViewController())
-        nav2.title = "item2"
-        let nav3 : UINavigationController = UINavigationController(rootViewController: KCollegeViewController())
-        nav3.title = "item3"
-        let nav4 : UINavigationController = UINavigationController(rootViewController: KProfileViewController())
-        nav4.title = "item4"
+        let filePath = Bundle.main.path(forResource: "RootControl.json", ofType: nil)
         
-        self.addChild(nav1);
-        self.addChild(nav2);
-        self.addChild(nav3);
-        self.addChild(nav4);
-        print("测试")
+        guard let path = filePath else {
+            return
+        }
+        
+        guard let jsonData = try? NSData(contentsOfFile: path, options: .mappedRead) else {
+            print("没有获取到json内容")
+            return
+        }
+        
+        guard let jsonObject = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableContainers) else {
+            print("Data转json失败")
+            return
+        }
+        
+        guard let dataArr = jsonObject as? [[String : AnyObject]] else {
+            print("json数组不存在")
+            return
+        }
+        
+        print(dataArr)
+        
+        for dict in dataArr {
+            
+            guard let vcName = dict["vcName"] as? String else {
+                continue
+            }
+            
+            guard let title = dict["title"] as? String else {
+                continue
+            }
+            
+            guard let imageName = dict["imageName"] as? String else {
+                continue
+            }
+            
+            createChildVCWith(vcName: vcName, title: title, imageStr: imageName)
+        }
+    }
+    
+    private func createChildVCWith(vcName : String, title : String, imageStr : String) {
+        
+        
+        guard let specName = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            print("没有获取到项目名称")
+            return
+        }
+        
+        guard let className = NSClassFromString(specName + "." + vcName) else{
+            print("控制器名称为空")
+            return
+        }
+        
+        guard let childClass = className as? UIViewController.Type else{
+            print("没有获取到对应控制器")
+            return
+        }
+        
+        let childVC = childClass.init()
+        childVC.title = title
+        childVC.tabBarItem.image = UIImage(named: imageStr)
+        addChild(UINavigationController(rootViewController: childVC))
     }
 
 }

@@ -1,0 +1,22 @@
+[
+    {
+        "vcName" : "KHomeViewController",
+        "title" : "首页",
+        "imageName" : "123"
+    },
+    {
+        "vcName" : "KTimeLineViewController",
+        "title" : "朋友圈",
+        "imageName" : "123"
+    },
+    {
+        "vcName" : "KCollegeViewController",
+        "title" : "学院",
+        "imageName" : "123"
+    },
+    {
+        "vcName" : "KProfileViewController",
+        "title" : "我的",
+        "imageName" : "123"
+    }
+]
