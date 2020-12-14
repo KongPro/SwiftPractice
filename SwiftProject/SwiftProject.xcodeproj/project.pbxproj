@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173BC3B225874401004CAF76 /* KHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BC3B125874401004CAF76 /* KHomeModel.swift */; };
+		173BC3B625874CC2004CAF76 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 173BC3B525874CC2004CAF76 /* data.json */; };
+		173BC3BA25874F02004CAF76 /* KDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BC3B925874F02004CAF76 /* KDataCenter.swift */; };
+		173BC3C025875EB8004CAF76 /* KHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BC3BF25875EB8004CAF76 /* KHomeCell.swift */; };
+		173BC3C525876CAC004CAF76 /* UIlabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173BC3C425876CAC004CAF76 /* UIlabel+Extension.swift */; };
 		1743CB43257F7C5400D99520 /* RootControl.json in Resources */ = {isa = PBXBuildFile; fileRef = 1743CB42257F7C5400D99520 /* RootControl.json */; };
 		176364A7257F644B00C47134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176364A6257F644B00C47134 /* AppDelegate.swift */; };
 		176364B0257F644C00C47134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176364AF257F644C00C47134 /* Assets.xcassets */; };
@@ -21,6 +26,11 @@
 
 /* Begin PBXFileReference section */
 		097D18226D38F159B5BE5746 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
+		173BC3B125874401004CAF76 /* KHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KHomeModel.swift; sourceTree = "<group>"; };
+		173BC3B525874CC2004CAF76 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		173BC3B925874F02004CAF76 /* KDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KDataCenter.swift; sourceTree = "<group>"; };
+		173BC3BF25875EB8004CAF76 /* KHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KHomeCell.swift; sourceTree = "<group>"; };
+		173BC3C425876CAC004CAF76 /* UIlabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Extension.swift"; sourceTree = "<group>"; };
 		1743CB42257F7C5400D99520 /* RootControl.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RootControl.json; sourceTree = "<group>"; };
 		176364A3257F644B00C47134 /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176364A6257F644B00C47134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +58,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		173BC3B0258743EB004CAF76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				173BC3B125874401004CAF76 /* KHomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		173BC3B825874DB6004CAF76 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				173BC3B925874F02004CAF76 /* KDataCenter.swift */,
+				173BC3C425876CAC004CAF76 /* UIlabel+Extension.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		173BC3BD25875E98004CAF76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				173BC3BF25875EB8004CAF76 /* KHomeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		173BC3BE25875E9D004CAF76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				176364C8257F64C500C47134 /* KHomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1763649A257F644B00C47134 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +118,7 @@
 				176364BF257F64C500C47134 /* TimeLine */,
 				176364C5257F64C500C47134 /* College */,
 				176364C1257F64C500C47134 /* Profile */,
+				173BC3B825874DB6004CAF76 /* Tools */,
 				176364C3257F64C500C47134 /* Resource */,
 				176364AF257F644C00C47134 /* Assets.xcassets */,
 				176364B1257F644C00C47134 /* LaunchScreen.storyboard */,
@@ -111,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				1743CB42257F7C5400D99520 /* RootControl.json */,
+				173BC3B525874CC2004CAF76 /* data.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -126,7 +171,9 @@
 		176364C7257F64C500C47134 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				176364C8257F64C500C47134 /* KHomeViewController.swift */,
+				173BC3BE25875E9D004CAF76 /* Controller */,
+				173BC3BD25875E98004CAF76 /* View */,
+				173BC3B0258743EB004CAF76 /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -210,6 +257,7 @@
 				176364B3257F644C00C47134 /* LaunchScreen.storyboard in Resources */,
 				176364B0257F644C00C47134 /* Assets.xcassets in Resources */,
 				1743CB43257F7C5400D99520 /* RootControl.json in Resources */,
+				173BC3B625874CC2004CAF76 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +312,11 @@
 			files = (
 				176364CD257F64C500C47134 /* KCollegeViewController.swift in Sources */,
 				176364CE257F64C500C47134 /* KHomeViewController.swift in Sources */,
+				173BC3C525876CAC004CAF76 /* UIlabel+Extension.swift in Sources */,
+				173BC3BA25874F02004CAF76 /* KDataCenter.swift in Sources */,
 				176364CB257F64C500C47134 /* KProfileViewController.swift in Sources */,
+				173BC3B225874401004CAF76 /* KHomeModel.swift in Sources */,
+				173BC3C025875EB8004CAF76 /* KHomeCell.swift in Sources */,
 				176364CA257F64C500C47134 /* KTimeLineViewController.swift in Sources */,
 				176364A7257F644B00C47134 /* AppDelegate.swift in Sources */,
 				176364C9257F64C500C47134 /* BaseTabbarController.swift in Sources */,
