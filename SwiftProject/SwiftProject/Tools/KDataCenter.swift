@@ -23,7 +23,6 @@ extension KDataCenter {
 
         guard let jsonObject = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .mutableLeaves) else { return }
         finished(jsonObject as AnyObject , nil)
-//        guard let array = jsonObject as [] else { return }
     }
     
 }

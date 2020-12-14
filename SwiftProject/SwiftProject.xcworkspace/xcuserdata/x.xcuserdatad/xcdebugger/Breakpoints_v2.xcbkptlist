@@ -26,9 +26,9 @@
             filePath = "SwiftProject/Home/View/KHomeCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "model"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewModel"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>

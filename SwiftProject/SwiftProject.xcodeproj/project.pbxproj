@@ -21,6 +21,7 @@
 		176364CB257F64C500C47134 /* KProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176364C2257F64C500C47134 /* KProfileViewController.swift */; };
 		176364CD257F64C500C47134 /* KCollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176364C6257F64C500C47134 /* KCollegeViewController.swift */; };
 		176364CE257F64C500C47134 /* KHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176364C8257F64C500C47134 /* KHomeViewController.swift */; };
+		178FCB29258773BF00F6C848 /* KHomeDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FCB28258773BF00F6C848 /* KHomeDataViewModel.swift */; };
 		C069CFC0F94E329B783440D6 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1EF81B2A005572B1A31A730 /* Pods_SwiftProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		176364C2257F64C500C47134 /* KProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KProfileViewController.swift; sourceTree = "<group>"; };
 		176364C6257F64C500C47134 /* KCollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCollegeViewController.swift; sourceTree = "<group>"; };
 		176364C8257F64C500C47134 /* KHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KHomeViewController.swift; sourceTree = "<group>"; };
+		178FCB28258773BF00F6C848 /* KHomeDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KHomeDataViewModel.swift; sourceTree = "<group>"; };
 		A1EF81B2A005572B1A31A730 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEFC96F5366CB76909B7A5A /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,11 +173,20 @@
 		176364C7257F64C500C47134 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				178FCB27258773A600F6C848 /* ViewModel */,
 				173BC3BE25875E9D004CAF76 /* Controller */,
 				173BC3BD25875E98004CAF76 /* View */,
 				173BC3B0258743EB004CAF76 /* Model */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		178FCB27258773A600F6C848 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				178FCB28258773BF00F6C848 /* KHomeDataViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E57B02EAF487A5EEE070059D /* Frameworks */ = {
@@ -314,6 +325,7 @@
 				176364CE257F64C500C47134 /* KHomeViewController.swift in Sources */,
 				173BC3C525876CAC004CAF76 /* UIlabel+Extension.swift in Sources */,
 				173BC3BA25874F02004CAF76 /* KDataCenter.swift in Sources */,
+				178FCB29258773BF00F6C848 /* KHomeDataViewModel.swift in Sources */,
 				176364CB257F64C500C47134 /* KProfileViewController.swift in Sources */,
 				173BC3B225874401004CAF76 /* KHomeModel.swift in Sources */,
 				173BC3C025875EB8004CAF76 /* KHomeCell.swift in Sources */,

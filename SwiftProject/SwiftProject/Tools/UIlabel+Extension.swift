@@ -12,5 +12,4 @@ extension UILabel {
     convenience init(title : String, fontSize : Double = 12 , textColor : UIColor = UIColor.black){
         self.init()
     }
-    
 }

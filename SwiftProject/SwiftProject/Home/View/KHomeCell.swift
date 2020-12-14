@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 class KHomeCell: UITableViewCell {
     
@@ -14,12 +15,13 @@ class KHomeCell: UITableViewCell {
     lazy var nameLbl = UILabel(title: "", fontSize: 16, textColor: UIColor.darkGray)
     lazy var textlbl = UILabel(title: "", fontSize: 12, textColor: UIColor.orange)
     
-    var model : KHomeModel? {
+    var viewModel : KHomeDataViewModel? {
         didSet{
-            guard let model = model else { return }
+            guard let viewModel = viewModel else { return }
             iconImageView.image = UIImage(named: "")
-            nameLbl.text = model.userName
-            textlbl.text = model.text
+            nameLbl.text = viewModel.homeModel?.userName;
+            textlbl.text = viewModel.homeModel?.text;
+            iconImageView.sd_setImage(with: viewModel.iconUrl, completed: nil)
         }
     }
     
@@ -31,12 +33,17 @@ class KHomeCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpUI()
     }
+
+}
+
+extension KHomeCell {
     
     private func setUpUI() {
-        iconImageView.backgroundColor = UIColor.lightGray
-        iconImageView.layer.cornerRadius = 20
+        
+        iconImageView.contentMode = .scaleAspectFit
         nameLbl.textColor = UIColor.darkGray
         nameLbl.font = UIFont.systemFont(ofSize: 16)
+        
         textlbl.textColor = UIColor.orange
         textlbl.font = UIFont.systemFont(ofSize: 12)
         
@@ -44,7 +51,12 @@ class KHomeCell: UITableViewCell {
         contentView.addSubview(nameLbl)
         contentView.addSubview(textlbl)
         
-        iconImageView .snp_makeConstraints { (make) in
+        setUpConstraints()
+    }
+    
+    private func setUpConstraints() {
+        
+        iconImageView.snp_makeConstraints { (make) in
             make.centerY.equalTo(self.contentView)
             make.leading.equalTo(self.contentView).offset(15)
             make.size.equalTo(CGSize(width: 40, height: 40))
