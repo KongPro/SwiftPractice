@@ -23,7 +23,7 @@ _`(闲时会及时练习和补充更多内容，这里仅作为补充记录)`_
 a. 常用工具类封装(AFN，UIImage，UIButton ... )    
 b. delegate使用  
 c. 网络方面可能需要注册第三方平台获取网络信息，暂时模拟  
-d. 本地数据存取
+d. 本地数据存取  
 e. UICollectionview，UIScrollview的使用(基本控件)  
 f. ...
 
